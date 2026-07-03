@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "figuritas-mundial-2026"
+version = "1.0.0"
+description = "Generador profesional de figuritas coleccionables estilo álbum de Mundial"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Dylan Davila", email = "dylandavi06@gmail.com"}
+]
+
+[project.urls]
+Homepage = "https://github.com/dylandavi06/Figuritas-mundial-2026"
+Repository = "https://github.com/dylandavi06/Figuritas-mundial-2026.git"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v"
