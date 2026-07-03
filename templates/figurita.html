@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figurita {{ numero }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 50mm;
+            height: 70mm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .figurita-card {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4mm;
+            position: relative;
+        }
+        
+        .numero {
+            position: absolute;
+            top: 2mm;
+            right: 2mm;
+            font-weight: bold;
+            font-size: 16pt;
+            background: rgba(0,0,0,0.1);
+            width: 8mm;
+            height: 8mm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #e63946;
+        }
+        
+        .figurita-image {
+            width: 42mm;
+            height: 48mm;
+            object-fit: cover;
+            border-radius: 2mm;
+            margin-bottom: 2mm;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .info {
+            text-align: center;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
+        .nombre {
+            font-weight: bold;
+            font-size: 9pt;
+            color: #000;
+            margin-bottom: 1mm;
+            word-break: break-word;
+        }
+        
+        .equipo {
+            font-size: 7pt;
+            color: #555;
+            margin-bottom: 0.5mm;
+        }
+        
+        .posicion {
+            font-size: 6pt;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="figurita-card">
+        <div class="numero">{{ numero }}</div>
+        <img src="{{ imagen_path }}" alt="{{ nombre }}" class="figurita-image">
+        <div class="info">
+            <div class="nombre">{{ nombre }}</div>
+            <div class="equipo">{{ equipo }}</div>
+            <div class="posicion">{{ posicion }}</div>
+        </div>
+    </div>
+</body>
+</html>
